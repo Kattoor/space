@@ -60,13 +60,13 @@ function updatePlayer() {
 }
 
 function applyFriction() {
-    if (Math.abs(player.velocity.x) > 0.5)
-        player.velocity.x = player.velocity.x / 10 * 9.9;
+    if (Math.abs(player.velocity.x) > 0.0001)
+        player.velocity.x = player.velocity.x / 10 * 9.99;
     else
         player.velocity.x = 0;
 
-    if (Math.abs(player.velocity.y) > 0.5)
-        player.velocity.y = player.velocity.y / 10 * 9.9;
+    if (Math.abs(player.velocity.y) > 0.0001)
+        player.velocity.y = player.velocity.y / 10 * 9.99;
     else
         player.velocity.y = 0;
 
